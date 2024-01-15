@@ -5,11 +5,11 @@ import Dashboard from "./pages/Dashboard";
 function App() {
   return (
     <div className="">
-      <Router basename="/e-commerce">
+      <Router >
         <Routes>
-          <Route path="/" element={<LoginPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/e-commerce" element={<LoginPage />} />
+          <Route path="/e-commerce/login" element={<LoginPage />} />
+          <Route path="/e-commerce/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>
