@@ -1,23 +1,16 @@
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { HashRouter , Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import Dashboard from "./pages/Dashboard";
-const router = createHashRouter([
-  {
-    path: "/",
-    element: <LoginPage />,
-  },
-  {
-    path: "/login",
-    element: <LoginPage/>,
-  },
-  {
-    path: "/dashboard",
-    element: <Dashboard/>,
-  },
-]);
+
 function App() {
   return <div className="">
-    <RouterProvider router={router} />
+    <HashRouter>
+    <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
+    </Routes>
+</HashRouter>
   </div>;
 }
 
