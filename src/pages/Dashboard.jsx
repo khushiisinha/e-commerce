@@ -19,17 +19,18 @@ function Dashboard() {
   const [totalAmount, setTotalAmount] = useState(null);
   const [showBag, setShowBag] = useState(false);
   useEffect(() => {
-    if (
-      location.state == null ||
-      !location.state.userIsAuthenticated ||
-      token !== location.state.token
-    ) {
-      navigate("/login");
-    }
-    if (location.state != null) {
-      setUsername(location.state.username);
-    }
-  }, [location, navigate]);
+  if (
+    location.state == null ||
+    !location.state.userIsAuthenticated ||
+    token !== location.state.token
+  ) {
+    navigate("/login"); 
+  }
+  if (location.state != null) {
+    setUsername(location.state.username);
+  }
+}, [location, navigate]);
+
   return (
     <div className=" w-full h-full bg-grey-bg ">
       {/* <RouterProvider router={router} /> */}
