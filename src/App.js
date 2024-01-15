@@ -6,8 +6,8 @@ function App() {
   return <div className="">
     <HashRouter>
     <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/e-commerce" element={<LoginPage />} />
+        <Route path="/e-commerce/login" element={<LoginPage/>} />
         <Route path="/dashboard" element={<Dashboard/>} />
     </Routes>
 </HashRouter>
