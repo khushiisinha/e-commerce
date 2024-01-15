@@ -7,6 +7,7 @@ function App() {
     <div className="">
       <Router basename="/e-commerce">
         <Routes>
+        <Route  exact path="/e-commerce" element={<LoginPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
