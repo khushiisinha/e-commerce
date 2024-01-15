@@ -8,7 +8,7 @@ function App() {
     <Routes>
         <Route path="/e-commerce" element={<LoginPage />} />
         <Route path="/e-commerce/login" element={<LoginPage/>} />
-        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/e-commerce/dashboard" element={<Dashboard/>} />
     </Routes>
 </HashRouter>
   </div>;
