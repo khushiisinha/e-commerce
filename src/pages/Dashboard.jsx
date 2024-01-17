@@ -24,7 +24,7 @@ function Dashboard() {
     !location.state.userIsAuthenticated ||
     token !== location.state.token
   ) {
-    navigate("/e-commerce/login"); 
+    navigate("/login"); 
   }
   if (location.state != null) {
     setUsername(location.state.username);

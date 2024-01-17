@@ -1,19 +1,24 @@
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import Dashboard from "./pages/Dashboard";
-
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LoginPage />,
+  },
+  {
+    path: "/login",
+    element: <LoginPage/>,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard/>,
+  },
+]);
 function App() {
-  return (
-    <div className="">
-      <Router >
-        <Routes>
-          <Route path="/e-commerce" element={<LoginPage />} />
-          <Route path="/e-commerce/login" element={<LoginPage />} />
-          <Route path="/e-commerce/dashboard" element={<Dashboard />} />
-        </Routes>
-      </Router>
-    </div>
-  );
+  return <div className="">
+    <RouterProvider router={router} />
+  </div>;
 }
 
 export default App;
